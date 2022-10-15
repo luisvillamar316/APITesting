@@ -13,8 +13,26 @@ playlists = [
     },
     {
         "track": 2,
-        "title": "Learn Python",
-        "artist": "Need to find a good Python tutorial on the web",
+        "title": "THE SHADE",
+        "artist": "Rex Orange County",
+        "done": False,
+    },
+{
+        "track": 3,
+        "title": "Pero",
+        "artist": "Zack Tabuldo",
+        "done": False,
+    },
+{
+        "track": 4,
+        "title": "golden hour",
+        "artist": "JVKE",
+        "done": False,
+    },
+{
+        "track": 5,
+        "title": "Come with me",
+        "artist": "Surfaces",
         "done": False,
     },
 ]
