@@ -38,7 +38,7 @@ def test_put_comment():
     if response.status_code == 200:
         assert response.ok
     else:
-        assert response.status_code
+        assert response.text
  
     
 def test_delete_comment():
@@ -51,7 +51,7 @@ def test_delete_comment():
     if response.status_code == 200:
         assert response.ok
     else:
-        assert response.reason
+        assert response.text
 
     
 def test_get_users():
@@ -73,6 +73,10 @@ def test_post_users():
         })
     response = requests.request("POST", url, headers=headers, data=payload)
     print(response.text)
+    if response.status_code == 200:
+        assert response.ok
+    else:
+        assert response.text
 
 
 def test_get_users_me():
