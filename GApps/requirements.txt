@@ -1,3 +1,6 @@
 pip install pytest
 pip install requests
 pip install ipython
+
+#to call the test file
+pytest add/to/path test_Gapps.py
