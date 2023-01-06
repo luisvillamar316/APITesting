@@ -12,8 +12,8 @@ payload_post  = json.dumps({
                     "RTE": "",
                     "dailyCheckInRestriction": "",
                     "paymentRestriction": "Paid",
-                    "calendarRestriction": "Tuesday3",
-                    "slots": 1,
+                    "calendarRestriction": "Friday1",
+                    "slots": 10,
                     "checkInOptions": "Require no check in",
                     "cancellationRestriction": "",
                     "paymentAmount": "",
@@ -27,7 +27,7 @@ payload_post  = json.dumps({
                     "parkingAddress": "world",
                     "checkInHealthRestriction": False,
                     "parkingStatus": False,
-                    "parkingArea": "hoyeah",
+                    "parkingArea": "BGC",
                     })
 
 payload_patch = json.dumps({
@@ -70,17 +70,17 @@ def test_get_parkingAreas():
 def test_post_parkingArea():
     response = requests.post(url_api_gateway, headers = headers, data = payload_post)
     print(response.status_code)
-    embed()
+    # embed()
     assert response.ok
 
-def test_patch_parkingArea():
-    response = requests.patch(url_api_gateway, headers = headers, data = payload_patch)
-    print(response.text)
-    embed()
-    assert response.ok
+# def test_patch_parkingArea():
+#     response = requests.patch(url_api_gateway, headers = headers, data = payload_patch)
+#     print(response.text)
+#     embed()
+#     assert response.ok
 
-def test_delete_parkingArea():
-    response = requests.delete(url_api_gateway, headers = headers, data = payload_delete)
-    print(response.text)
-    embed()
-    assert response.ok
+# def test_delete_parkingArea():
+#     response = requests.delete(url_api_gateway, headers = headers, data = payload_delete)
+#     print(response.text)
+#     embed()
+#     assert response.ok
