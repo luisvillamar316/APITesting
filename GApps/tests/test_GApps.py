@@ -13,7 +13,7 @@ payload_post  = json.dumps({
                     "RTE": "",
                     "dailyCheckInRestriction": "",
                     "paymentRestriction": "Paid",
-                    "calendarRestriction": "Monday2",
+                    "calendarRestriction": "Wednesday2",
                     "slots": 10,
                     "checkInOptions": "Require no check in",
                     "cancellationRestriction": "",
@@ -28,7 +28,7 @@ payload_post  = json.dumps({
                     "parkingAddress": "world",
                     "checkInHealthRestriction": False,
                     "parkingStatus": False,
-                    "parkingArea": "forrenz",
+                    "parkingArea": "test",
                     })
 
 payload_patch = json.dumps({
@@ -63,15 +63,15 @@ url_all_parking = "https://zh66xn42vk.execute-api.ap-southeast-1.amazonaws.com/s
 # #     print(response.status_code)
 # #     assert response.ok
 
-def test_get_parkingAreas():
-    logging.basicConfig(args="/Users/glmacm1315332/Documents/GApps web testing/my-api-testing/GApps/tests/test_GApps.log", level=logging.DEBUG, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
-    logger = logging.getLogger(__name__)
-    logger.info("Starting test")
-    response = requests.get(url_all_parking, headers= headers)
-    print(response.text)
-    # embed()
-    assert response.ok
-    logger.info("Done test")
+# def test_get_parkingAreas():
+#     logging.basicConfig(args="/Users/glmacm1315332/Documents/GApps web testing/my-api-testing/GApps/tests/test_GApps.log", level=logging.DEBUG, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+#     logger = logging.getLogger(__name__)
+#     logger.info("Starting test")
+#     response = requests.get(url_all_parking, headers= headers)
+#     print(response.text)
+#     # embed()
+#     assert response.ok
+#     logger.info("Done test")
 
 # def test_two():
 #     logging.basicConfig(args="/Users/glmacm1315332/Documents/GApps web testing/my-api-testing/GApps/tests/test_GApps.log", level=logging.DEBUG, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
@@ -80,12 +80,11 @@ def test_get_parkingAreas():
 #     pass
     
 
-# def test_post_p
-# arkingArea():
-#     response = requests.post(url_api_gateway, headers = headers, data = payload_post)
-#     print(response.status_code)
-#     # embed()
-#     assert response.ok
+def test_post_parkingArea():
+    response = requests.post(url_api_gateway, headers = headers, data = payload_post)
+    print(response.status_code)
+    # embed()
+    assert response.ok
 
 # def test_patch_parkingArea():
 #     response = requests.patch(url_api_gateway, headers = headers, data = payload_patch)
