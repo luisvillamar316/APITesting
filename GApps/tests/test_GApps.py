@@ -17,7 +17,7 @@ payload_post  = json.dumps({
                     "slots": 10,
                     "checkInOptions": "Require no check in",
                     "cancellationRestriction": "",
-                    "paymentAmount": "",
+                    "paymentAmount": "1",
                     "checkInAndOutHealthRestriction": False,
                     "dailyCheckInAndOutRestriction": "",
                     "dedicateSlots": 2,
